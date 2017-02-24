@@ -1,0 +1,55 @@
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../foundation/css/foundation.css" />
+        <script src="../foundation/js/vendor/modernizr.js"></script>
+        <link rel="stylesheet" type="text/css" href="Didactic/font.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    	<title>Scattergories List Generator</title>
+        <script type="text/javascript" src="timer.min.js"></script>	
+        <script type="text/javascript" src='js/string.js'></script>
+    </head>
+
+    <body>
+        <div class="headbar">
+            <div class="text-center">Scattergories List Generator</div>
+        </div>
+
+        <div class="row main">
+            <div class="leftside letter small-12 medium-3 columns text-center">
+                <div class='letter actualletter'></div>
+                <br>
+                <div class="timer">150</div>
+                <br>
+                <div class="start_button"><i class="fa fa-play"></i></div>
+            </div>
+            <div class="medium-9 columns scatlist">
+            </div>
+        </div>
+
+        <div class="row text-center show-for-medium-down ">
+            <div class="submit small-12 medium-6 columns small-centered medbutton">&nbsp;<i class="fa fa-long-arrow-right"></i></div>
+        </div>
+        <div class="rightbutton show-for-large-up">&nbsp;
+            <div class="submit small-centered"><i class="fa fa-long-arrow-right"></i></div>
+        </div>
+        <div class="custom-stuff">
+            <div class='timer-form columns'>
+                <input type='text' name='time' id='timer-length' placeholder='Timer Length (seconds)'>
+                <button id='set-timer'>Set</button>
+            </div>
+            <div class='categories-form'>
+                <input type='text' name='custom-categories' id='custom-categories' placeholder='Add Category'>
+                <button id='add-category'>Add</button>
+                <button id='done'>Done</button>
+            </div>
+        </div>
+        <script src="../foundation/js/vendor/jquery.js"></script>
+        <script src="../foundation/js/foundation.min.js"></script>
+        <script src="js/set_timer.js"></script>
+        <script src="js/add_categories.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

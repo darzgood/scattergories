@@ -1,0 +1,93 @@
+body {
+    background: #eee;
+}
+.number,
+.cat {
+    padding:0;
+}
+
+.number {
+    padding-right:8px;
+}
+
+.listrow {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+body,h1,h2,h3,h4 {
+    font-family: 'Helvetica', sans-serif;
+}
+.submit{
+     font-size:2em;
+ 
+     border-radius: 3px;
+}
+.headbar > * {
+    display:inline-block;
+}
+.headbar {
+    padding: 10px;
+}
+.letter {
+    font-size: 3em;
+    line-height: 0.8;
+}
+.scatlist {
+    -webkit-filter:blur(20px);
+    -webkit-transition:500ms ease-in all;
+    transition:500ms ease-in all;
+}
+.rightbutton {
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    right:0;
+    height:100%;
+    width:20%;
+    vertical-align:middle;
+    text-align:center;line-height:100%; 
+                    -webkit-transition:500ms ease-in all;
+    transition:500ms ease-in all;
+    opacity: 0.7;
+}
+.rightbutton:hover,
+    .medbutton:hover {
+    background: #ccc;
+            -webkit-transition:500ms ease-in all;
+    transition:500ms ease-in all;
+}
+.rightbutton .submit {
+    height: 100%;
+    border: none;
+      position: absolute;
+      top: 50%;
+      height: 100px;
+      width:50px;
+      margin-top: -50px; 
+      margin-left: -25px;
+    left: 50%;
+}
+.start_button {
+    -webkit-transition:500ms ease-in all;
+    transition:500ms ease-in all;
+      -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+cursor: pointer;
+
+}
+.medbutton {
+    vertical-align:middle;
+    
+    cursor: pointer;
+ -webkit-transition:500ms ease-in all;
+    transition:500ms ease-in all;
+}
+
+.timer:hover{
+    cursor: pointer;
+}
+
+@import 'forms';
