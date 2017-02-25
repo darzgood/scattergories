@@ -307,6 +307,21 @@ function getLetter() {
     $('.actualletter').html(letter);
 }
 
+var insert = true;
+var k = 0;
+var childNumbers = [];
+function getRow(){
+    getRandom(1, 12);
+    insert = true;
+    k = 0;
+    while (k < childNumbers.length && insert === true ){
+        if (randomNumber == childNumbers[k]){
+            insert = false;
+        }
+        k++;
+    }
+}
+
 function populate() {
     $('.scatlist').empty();
     if(clone.length < 12) clone = list;
@@ -334,7 +349,7 @@ function populate() {
 
     if (userList.length > 0){
         var iterations;
-        // var childNumbers = [];
+        childNumbers = [];
         if (userList.length == 1){
             iterations = 1;
         } else if (userList.length > 0 && userList.length < 6){
@@ -349,23 +364,15 @@ function populate() {
             userCategory = userList[randomNumber];
             userList.splice(randomNumber, 1);
             list.push(userCategory);
-            getRandom(1, 12);
-            // var insert = true;
-            // var j = 0;
-            // while (j < childNumbers.length && insert == true ){
-            //     if randomNumber == childNumbers[j]{
-            //         insert = false;
-            //     }
-            //     j++;
-            // }
-            $('.scatlist .listrow:nth-child('+randomNumber+') .cat').empty().append(userCategory);
-            // childNumbers.push(randomNumber);
-        }
-    }
 
-            //Make sure userCategory doesn't overwrite itself in the same child-row
-        
-            
+            getRow();
+            while (insert === false){
+                getRow();
+            }
+            $('.scatlist .listrow:nth-child('+randomNumber+') .cat').empty().append(userCategory);
+            childNumbers.push(randomNumber);
+        }
+    }       
 }
 
 function restart() {

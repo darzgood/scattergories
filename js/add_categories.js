@@ -17,4 +17,5 @@ $('#done').click(function(){
 	populate();
 	$('#custom-categories').val("");
     $(".categories-form").fadeOut();
+    console.log(userList);
 });
