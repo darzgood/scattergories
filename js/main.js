@@ -252,8 +252,6 @@ timer.on('end', function () {
 
 
 $('.start_button').on('click',function() {
-    $(".timer-form").fadeOut();
-    $(".categories-form").fadeOut();
     if($(this).children('i').hasClass("fa-pause")){
         $('.scatlist').css("-webkit-filter","blur(20px)");
         timer.pause();

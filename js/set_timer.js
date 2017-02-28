@@ -6,13 +6,12 @@ $('#set-timer').click(function(){
 	if (Number.isInteger(timerLength)){
 		seconds = timerLength;
 		$('.timer').empty().append(timerLength);
-		$(".timer-form").fadeOut();
+		$('#timer-length').val("");
 	}
 });
 
 $('.timer').click(function(){
-	$(".timer-form").fadeIn();
-	$(".categories-form").fadeIn();
+	$("#customize-overlay").fadeIn();
 });
 
 $("#timer-length").keyup(function(event){

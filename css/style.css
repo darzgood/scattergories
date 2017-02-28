@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Didactic-Mono', "Helvetica", sans-serif;
+  src: url("didactic.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: 'Didactic', "Helvetica", sans-serif;
+  src: url("d.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 400; }
 body {
   background: #eee; }
 
@@ -6,14 +18,15 @@ body {
   padding: 0; }
 
 .number {
-  padding-right: 8px; }
+  padding-right: 8px;
+  font-family: 'Didactic-Mono', "Helvetica", sans-serif; }
 
 .listrow {
   margin: 0;
   font-size: 1.8em; }
 
 body, h1, h2, h3, h4 {
-  font-family: 'Helvetica', sans-serif; }
+  font-family: "Didactic", "Helvetica", sans-serif; }
 
 .submit {
   font-size: 2em;
@@ -93,16 +106,84 @@ button {
   text-align: left; }
 
 .timer-form {
-  display: inline-block;
-  width: 25%;
-  margin-right: 200px; }
+  width: 170px;
+  margin-bottom: 35px; }
 
-.categories-form {
-  display: inline-block;
-  width: 300px; }
+#custom-categories {
+  width: 100%; }
+
+.buttons {
+  padding: 8px 10px;
+  border: 1px solid #606060;
+  font-size: .9em;
+  margin-bottom: 0; }
+
+.buttons:hover, .buttons:focus {
+  background-color: #606060; }
+
+#customize {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  z-index: 2000; }
+
+#customize-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  display: none; }
+
+#customize-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 4000; }
 
 .custom-stuff {
-  width: 1000px;
-  margin: 0 auto; }
+  width: 450px;
+  margin: 0 auto;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 40px;
+  z-index: 5000; }
+
+.customize-column {
+  width: 50%;
+  display: inline-block; }
+
+.customize-column-left {
+  width: 100%; }
+
+.customize-column-right {
+  padding-left: 35px;
+  height: 211px;
+  overflow-y: auto;
+  display: none;
+  border-left: 1px solid #ccc; }
+
+.category-row {
+  font-size: .9em;
+  color: #606060;
+  padding-bottom: .3em; }
+
+@media all and (max-width: 667px) {
+  .custom-stuff {
+    padding: 30px 20px; }
+
+  .customize-column-right {
+    padding-left: 0;
+    padding-top: 20px;
+    height: 100px;
+    width: 100%;
+    overflow-y: auto;
+    border-left: none;
+    margin-top: 30px;
+    border-top: 1px solid #ccc; } }
 
 /*# sourceMappingURL=style.css.map */

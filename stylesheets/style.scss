@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Didactic-Mono', "Helvetica", sans-serif;
+  src:url('didactic.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
+@font-face {
+  font-family: 'Didactic', "Helvetica", sans-serif;
+  src:url('d.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
 body {
     background: #eee;
 }
@@ -5,23 +17,22 @@ body {
 .cat {
     padding:0;
 }
-
 .number {
     padding-right:8px;
+    font-family: 'Didactic-Mono', "Helvetica", sans-serif;
 }
-
 .listrow {
     margin: 0;
     font-size: 1.8em;
 }
 
 body,h1,h2,h3,h4 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: "Didactic", "Helvetica", sans-serif;
 }
 .submit{
-     font-size:2em;
+    font-size:2em;
  
-     border-radius: 3px;
+    border-radius: 3px;
 }
 .headbar > * {
     display:inline-block;
@@ -60,29 +71,27 @@ body,h1,h2,h3,h4 {
 .rightbutton .submit {
     height: 100%;
     border: none;
-      position: absolute;
-      top: 50%;
-      height: 100px;
-      width:50px;
-      margin-top: -50px; 
-      margin-left: -25px;
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    width:50px;
+    margin-top: -50px; 
+    margin-left: -25px;
     left: 50%;
 }
 .start_button {
     -webkit-transition:500ms ease-in all;
     transition:500ms ease-in all;
       -webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-cursor: pointer;
-
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
 .medbutton {
     vertical-align:middle;
-    
     cursor: pointer;
- -webkit-transition:500ms ease-in all;
+    -webkit-transition:500ms ease-in all;
     transition:500ms ease-in all;
 }
 
@@ -91,3 +100,4 @@ cursor: pointer;
 }
 
 @import 'forms';
+@import 'customize';
