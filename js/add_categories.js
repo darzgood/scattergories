@@ -1,5 +1,6 @@
 var newCategory;
 var userList = [];
+var done = true;
 
 $("#custom-categories").keyup(function(event){
 	if(event.keyCode == 13){
@@ -8,7 +9,10 @@ $("#custom-categories").keyup(function(event){
 });
 
 $('#done').click(function(){
-	populate();
+	if (done === true){
+		populate();
+	}
+	done = false;
 	$('#custom-categories').val("");
 	$('#customize-overlay').fadeOut();
 	$('.customize-column-right').empty();
