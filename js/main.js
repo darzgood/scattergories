@@ -246,7 +246,7 @@ timer.on('end', function () {
     beep();
     setTimeout(function(){
         alert("Time's up!");
-    },50);
+    },90);
     $('.scatlist').css("-webkit-filter","blur(0px)");
 });
 
